@@ -159,10 +159,13 @@ section {
     aspect-ratio: 2 / 3;
     object-fit: cover;
     background: #cfcfcf;
+    /* 사진 아랫부분을 배경으로 자연스럽게 흐려지게 한다 */
+    -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
 }
 
 .mcard-intro .bottom {
-    margin-top: 30px;
+    margin-top: 0;
     font-size: .9rem;
 }
 
