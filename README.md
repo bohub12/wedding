@@ -9,22 +9,30 @@ index.html              페이지 본문 (이름, 일시, 장소, 연락처, 계
 assets/css/style.css    스타일 (상단 :root 변수에 테마 색상)
 assets/js/main.js       달력, 디데이, 갤러리, 공유 등 동작 (상단 CONFIG에 설정값)
 images/main.jpg         메인 사진 (2:3 세로 비율 권장)
-images/og.jpg           카카오톡/링크 공유 미리보기 이미지 (2:1 가로 비율 권장)
-images/gallery/01.jpg   갤러리 사진 (01 ~ 15, 4:5 비율 권장)
+images/og.jpg           카카오톡/링크 공유 미리보기 이미지 (지금은 메인 사진을 줄인 것)
+images/gallery/01.jpg   갤러리 사진 원본 보기용 (01 ~ 25, 긴 변 1600px)
+images/gallery/thumb/   갤러리 목록용 썸네일 (같은 파일명, 긴 변 600px)
 ```
 
 ## 사진 교체
 
-지금 들어 있는 사진은 모두 회색 임시 이미지다. 같은 파일명으로 덮어쓰면 된다.
+원본 사진은 용량이 커서(장당 12~24MB) 줄여서 넣는다. macOS 기본 `sips`로 변환한다.
+
+```
+sips -s format jpeg -s formatOptions 82 -Z 1920 원본.jpeg --out images/main.jpg
+sips -s format jpeg -s formatOptions 80 -Z 1200 원본.jpeg --out images/og.jpg
+sips -s format jpeg -s formatOptions 80 -Z 1600 원본.jpeg --out images/gallery/01.jpg
+sips -s format jpeg -s formatOptions 75 -Z 600 원본.jpeg --out images/gallery/thumb/01.jpg
+```
+
 갤러리 장수를 바꾸려면 `assets/js/main.js`의 `CONFIG.galleryCount`를 함께 수정한다.
 
 ## 채워 넣어야 할 정보
 
 `index.html`에서 아래 임시 값을 검색해서 바꾼다.
 
-- 부모님 성함: `신랑아버지`, `신랑어머니`, `신부아버지`, `신부어머니`
-- 연락처: `010-0000-0000`
-- 계좌: `OO은행`, `000-0000-0000` (`data-copy` 속성 값도 같이 수정)
+- 신부 부모님 연락처: 주석으로 숨겨 둔 상태다. `연락처가 정해지면`을 검색해서 번호를 채우고 주석을 푼다.
+- 부모님 계좌: 주석으로 숨겨 둔 상태다. `계좌번호가 정해지면`을 검색해서 은행, 번호, `data-copy` 값을 채우고 주석을 푼다.
 - 버스 노선: `노선 정보 추후 업데이트`
 
 `assets/js/main.js`의 `CONFIG`에서 설정한다.

@@ -6,8 +6,8 @@
         weddingDate: new Date('2027-01-10T14:30:00+09:00'),
         groomShort: '보규',
         brideShort: '민지',
-        // images/gallery/01.jpg ~ NN.jpg
-        galleryCount: 15,
+        // images/gallery/01.jpg ~ NN.jpg (목록은 images/gallery/thumb/ 의 같은 파일명 썸네일)
+        galleryCount: 25,
         // 참석 의사 전달용 구글폼 등의 주소. 비워두면 준비중 안내만 띄운다.
         rsvpUrl: '',
         // Kakao Developers JavaScript 키. 카카오톡 공유와 카카오내비 길안내에 쓴다.
@@ -147,8 +147,9 @@
         var html = '';
         for (var i = 1; i <= CONFIG.galleryCount; i++) {
             var src = 'images/gallery/' + pad(i) + '.jpg';
+            var thumb = 'images/gallery/thumb/' + pad(i) + '.jpg';
             galleryImages.push(src);
-            html += '<div class="item" data-index="' + (i - 1) + '" style="background-image:url(\'' + src + '\')"></div>';
+            html += '<div class="item" data-index="' + (i - 1) + '" style="background-image:url(\'' + thumb + '\')"></div>';
         }
         grid.innerHTML = html;
         grid.addEventListener('click', function (e) {
