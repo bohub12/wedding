@@ -8,8 +8,6 @@
         brideShort: '민지',
         // images/gallery/01.jpg ~ NN.jpg (목록은 images/gallery/thumb/ 의 같은 파일명 썸네일)
         galleryCount: 25,
-        // 참석 의사 전달용 구글폼 등의 주소. 비워두면 준비중 안내만 띄운다.
-        rsvpUrl: '',
         // Kakao Developers JavaScript 키. 카카오톡 공유와 카카오내비 길안내에 쓴다.
         // 비워두면 공유는 기기 기본 공유나 링크 복사로, 길안내는 카카오맵 길찾기로 대체한다.
         kakaoJsKey: '',
@@ -233,17 +231,6 @@
         });
     }
 
-    // ===== 참석 의사 =====
-    function bindRsvp() {
-        $('#rsvp-button').addEventListener('click', function () {
-            if (CONFIG.rsvpUrl) {
-                window.open(CONFIG.rsvpUrl, '_blank', 'noopener');
-            } else {
-                toast('참석 의사 전달은 준비중입니다.');
-            }
-        });
-    }
-
     // ===== 공유 =====
     function pageUrl() {
         return location.href.split('#')[0].split('?')[0];
@@ -420,7 +407,6 @@
     bindViewer();
     bindModal();
     bindAccounts();
-    bindRsvp();
     bindShare();
     renderMap();
     bindNavi();

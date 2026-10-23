@@ -529,55 +529,6 @@ section {
     word-break: keep-all;
 }
 
-/* 참석 의사 */
-.rsvp-wrap {
-    padding: 10px var(--common-margin-lr);
-    margin: 36px 0;
-}
-
-.rsvp-wrap .card {
-    position: relative;
-    padding: 2.5rem 0 2rem;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    background: var(--fourth-bg-color);
-}
-
-.rsvp-wrap .title {
-    position: absolute;
-    top: -1rem;
-    width: 100%;
-}
-
-.rsvp-wrap .title .inner {
-    display: inline-block;
-    padding: 0 24px;
-    color: var(--text-dark-color);
-    background: var(--border-color);
-    border-radius: 32px;
-    font-size: .9rem;
-}
-
-.rsvp-wrap .text {
-    font-size: .85rem;
-    line-height: 1.9rem;
-}
-
-.m-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    margin-top: 1.2rem;
-    padding: 0 1.8rem;
-    color: var(--btn-text-color);
-    border: 1px solid var(--btn-border-color);
-    border-radius: 32px;
-    font-family: var(--font-gothic), sans-serif;
-    font-size: .8rem;
-    line-height: 2.2rem;
-}
-
 /* 계좌 */
 .account-wrap {
     padding: 60px 1.1rem 70px;

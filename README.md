@@ -31,13 +31,10 @@ sips -s format jpeg -s formatOptions 75 -Z 600 원본.jpeg --out images/gallery/
 
 `index.html`에서 아래 임시 값을 검색해서 바꾼다.
 
-- 신부 부모님 연락처: 주석으로 숨겨 둔 상태다. `연락처가 정해지면`을 검색해서 번호를 채우고 주석을 푼다.
-- 부모님 계좌: 주석으로 숨겨 둔 상태다. `계좌번호가 정해지면`을 검색해서 은행, 번호, `data-copy` 값을 채우고 주석을 푼다.
-- 버스 노선: `노선 정보 추후 업데이트`
+- 신랑 부모님 계좌: 주석으로 숨겨 둔 상태다. `계좌번호가 정해지면`을 검색해서 은행, 번호, `data-copy` 값을 채우고 주석을 푼다.
 
 `assets/js/main.js`의 `CONFIG`에서 설정한다.
 
-- `rsvpUrl`: 참석 의사 전달용 구글폼 주소
 - `kakaoJsKey`: Kakao JavaScript 키. 카카오톡 공유와 카카오내비 길안내에 쓴다.
     - Kakao Developers에서 앱을 만들고 플랫폼 > Web에 `https://bohub12.github.io`, `http://localhost:8000`을 등록한다.
     - 카카오내비 길안내는 카카오내비 메뉴도 활성화해야 한다.
