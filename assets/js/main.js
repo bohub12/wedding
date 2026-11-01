@@ -7,7 +7,7 @@
         groomShort: '보규',
         brideShort: '민지',
         // images/gallery/01.jpg ~ NN.jpg (목록은 images/gallery/thumb/ 의 같은 파일명 썸네일)
-        galleryCount: 25,
+        galleryCount: 26,
         // Kakao Developers JavaScript 키. 카카오톡 공유와 카카오내비 길안내에 쓴다.
         // 비워두면 공유는 기기 기본 공유나 링크 복사로, 길안내는 카카오맵 길찾기로 대체한다.
         kakaoJsKey: '',
