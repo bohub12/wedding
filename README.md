@@ -27,11 +27,10 @@ sips -s format jpeg -s formatOptions 75 -Z 600 원본.jpeg --out images/gallery/
 
 갤러리 장수를 바꾸려면 `assets/js/main.js`의 `CONFIG.galleryCount`를 함께 수정한다.
 
-## 채워 넣어야 할 정보
+## 설정
 
-`index.html`에서 아래 임시 값을 검색해서 바꾼다.
-
-- 신랑 어머니(박순우) 계좌: 주석으로 숨겨 둔 상태다. `계좌번호가 정해지면`을 검색해서 은행, 번호, `data-copy` 값을 채우고 주석을 푼다.
+이름, 일시, 장소, 연락처, 계좌 같은 텍스트는 `index.html`에서 바로 고친다.
+계좌를 바꿀 때는 화면에 보이는 번호와 복사 버튼의 `data-copy` 값을 함께 바꾼다.
 
 `assets/js/main.js`의 `CONFIG`에서 설정한다.
 
